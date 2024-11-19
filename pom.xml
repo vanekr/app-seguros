@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Declaración de la versión y codificación del XML -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> <!-- Declaración del proyecto y los espacios de nombres -->
+    <modelVersion>4.0.0</modelVersion> <!-- Versión del modelo POM -->
+    <parent>
+        <groupId>org.springframework.boot</groupId> <!-- Grupo del padre -->
+        <artifactId>spring-boot-starter-parent</artifactId> <!-- Artefacto del padre -->
+        <version>3.3.4</version> <!-- Versión del padre -->
+        <relativePath/> <!-- Buscar el padre en el repositorio -->
+    </parent>
+    <groupId>cl.inacap.authjwt</groupId> <!-- Grupo del proyecto -->
+    <artifactId>jwtauth</artifactId> <!-- Artefacto del proyecto -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Versión del proyecto -->
+    <name>jwtauth</name> <!-- Nombre del proyecto -->
+    <description>Demo project for Spring Boot</description> <!-- Descripción del proyecto -->
+    <url/> <!-- URL del proyecto -->
+    <licenses>
+        <license/> <!-- Licencia del proyecto -->
+    </licenses>
+    <developers>
+        <developer/> <!-- Desarrollador del proyecto -->
+    </developers>
+    <scm>
+        <connection/> <!-- Conexión SCM -->
+        <developerConnection/> <!-- Conexión de desarrollador SCM -->
+        <tag/> <!-- Etiqueta SCM -->
+        <url/> <!-- URL SCM -->
+    </scm>
+    <properties>
+        <java.version>17</java.version> <!-- Versión de Java -->
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-boot-starter-data-jpa</artifactId> <!-- Artefacto de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-boot-starter-security</artifactId> <!-- Artefacto de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-boot-starter-web</artifactId> <!-- Artefacto de la dependencia -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-boot-devtools</artifactId> <!-- Artefacto de la dependencia -->
+            <scope>runtime</scope> <!-- Alcance de la dependencia -->
+            <optional>true</optional> <!-- Dependencia opcional -->
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>lombok</artifactId> <!-- Artefacto de la dependencia -->
+            <optional>true</optional> <!-- Dependencia opcional -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-boot-starter-test</artifactId> <!-- Artefacto de la dependencia -->
+            <scope>test</scope> <!-- Alcance de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>spring-security-test</artifactId> <!-- Artefacto de la dependencia -->
+            <scope>test</scope> <!-- Alcance de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>jjwt-api</artifactId> <!-- Artefacto de la dependencia -->
+            <version>0.11.5</version> <!-- Versión de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>jjwt-impl</artifactId> <!-- Artefacto de la dependencia -->
+            <version>0.11.5</version> <!-- Versión de la dependencia -->
+            <scope>runtime</scope> <!-- Alcance de la dependencia -->
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId> <!-- Grupo de la dependencia -->
+            <artifactId>jjwt-jackson</artifactId> <!-- Artefacto de la dependencia -->
+            <version>0.11.5</version> <!-- Versión de la dependencia -->
+            <scope>runtime</scope> <!-- Alcance de la dependencia -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId> <!-- Grupo del plugin -->
+                <artifactId>spring-boot-maven-plugin</artifactId> <!-- Artefacto del plugin -->
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId> <!-- Grupo de la exclusión -->
+                            <artifactId>lombok</artifactId> <!-- Artefacto de la exclusión -->
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
